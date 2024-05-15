@@ -189,7 +189,7 @@ input::placeholder {
     background-color: white;
     color: black;
 }
-
+.g-green-bg{background-color:#1bbc9b}
 #bottom3 {
     border: 1px solid yellow;
     width: 200px;
@@ -268,9 +268,51 @@ input::placeholder {
     width: 100%;
     height: 100%;
   }
-  
+.circlesize{
+    height:50px;
+    width:50px;
 
-  
+}
+.test1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    box-sizing: border-box;
+}
+.portfolio-img{margin-left: 300px;
+                margin-right: 300px;
+                padding: 0px;
+}
+#smallsize{
+         margin-top: 0px; 
+     margin-bottom: 0px;
+     font-size: small;
+     
+}
+#smallsize:hover {
+
+    transform: scale(0.8)!important;
+    
+}
+.icon1{
+    background-image: url(icon1.png);
+    background-size: contain;
+}
+.icon2{
+    background-image: url(icon2.png);
+    background-size: contain;
+}
+.icon3{
+    background-image: url(icon3.png);
+    background-size: contain;
+}
+.icon4{
+    background-image: url(icon4.png);
+    background-size: contain;
+}
+
+
   .image:hover .middle {
     opacity: 1;
   }
@@ -286,22 +328,6 @@ input::placeholder {
     opacity: 0.7;
   }
 
-/* .image:after {
-    content:'\A';
-    position:absolute;
-    width:100%; height:100%;
-    border-radius: 5px;
-    top:0; left:0;
-    background:#1bbc9b;
-    opacity:0;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    font-size: 125px;
-    text-align: center;
-    content: " + ";
-    color: white;
-    
-} */
 .image:hover:after {
     opacity:0.9;
 }
@@ -351,6 +377,7 @@ text-decoration:solid;}
 #list{margin-right: 150px;}
 
 
+
 @media (max-width: 992px){
     .navbar-brand{
         left: 100px;
@@ -367,6 +394,12 @@ text-decoration:solid;}
         margin-left: 200px;
         margin-right: 200px;
     
+    }
+    .portfolio-img{margin-left: 200px;
+        margin-right: 200px;
+}
+    #smallsize{
+        margin-bottom: 25px;
     }
 }
 @media (max-width: 768px){
@@ -385,6 +418,9 @@ text-decoration:solid;}
         margin-right: 100px;
     
     }
+    .portfolio-img{margin-left: 100px;
+        margin-right: 100px;
+}
 }
 @media (max-width: 576px){
     .navbar-brand{
@@ -396,5 +432,8 @@ text-decoration:solid;}
         margin-bottom: 10px;
     
     }
+    .portfolio-img{margin-left: 5px;
+        margin-right: 5px;
+}
    
 }
