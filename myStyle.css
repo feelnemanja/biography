@@ -189,6 +189,7 @@ input::placeholder {
     background-color: white;
     color: black;
 }
+
 .g-green-bg{background-color:#1bbc9b}
 #bottom3 {
     border: 1px solid yellow;
@@ -375,6 +376,106 @@ text-decoration:solid;}
 .row{gap: 0;}
 .navbar-toggler{background-color: #1bbc9b;}
 #list{margin-right: 150px;}
+
+#smile1-div
+{
+    display: none;
+}
+#smile2-div
+{
+    display: none;
+}
+#smile3-div
+{
+    display: none;
+}
+#smile4-div
+{
+    display: none;
+}
+#smile5-div
+{
+    display: none;
+}
+.labelw{
+    width: 450px;
+    height: 50px;
+    border: 2px black solid;
+
+}
+.labelr{
+    position: relative;
+    width: 450px;
+    height: 50px;
+    border: 1px black solid;
+    padding-left: 30px;
+    background-color: #b0e5da;
+    text-wrap: 2;
+    margin-bottom: 1px;
+
+}
+#otherinput{
+    display: none;
+}
+.radioposition{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+.smile{
+    font-size: 100px;
+}
+.survery-main-div{
+    display: flex;
+    }
+.g-lgreen{
+    background-color: #b0e5da;
+}
+#question1-div
+{
+display: none;
+}
+#question1
+{
+margin-top: 50px;
+}
+
+#question2-div
+{
+display: none;
+}
+#question2
+{
+margin-top: 50px;
+}
+
+#question3-div
+{
+display: none;
+}
+#question3
+{
+
+margin-top: 50px;
+}
+
+#question4-div
+{
+display: none;
+}
+#question4
+{
+margin-top: 50px;
+}
+
+#question5-div
+{
+display: none;
+}
+#question5
+{
+margin-top: 50px;
+}
 
 
 

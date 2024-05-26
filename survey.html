@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="myStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/cd609234bb.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body class="g-green-bg">
+    <nav class="navbar navbar-expand-md" id="nav-bar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"> NEMANJA FILIPOVIĆ </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+                aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" id="menubutton"> MENU ☰</span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample04" id="navbar-right">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0" id="list">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="portfolio.html"> PORTFOLIO </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index/#aboutid">ABOUT </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contat-me-id"> CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="survey.html"> SURVEY</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <div class="container-fluid g-green-bg" id="survery-main-div">
+        <div class="row">
+            <div class="lg-12 md-12 sm-12 text-center py-3" id="home-div">
+                <br>
+                <span class="text-dark fst-italic fw-bolder"> Portfolio </span>
+                <br>
+                <h2 class="text-dark"> WONDERING IF TECH IS RIGHT FOR YOU? </h2>
+                <span class="text-dark p-3"> Take this 3-minute survey and find out</span>
+                <br>
+                <br>
+                <input type="button" class="btn btn-dark" value="START" onclick="Start()">
+
+            </div>
+        </div>
+    <div id="question1-div">
+    <div class="d-flex justify-content-center">
+    <div id="question1" class="">
+        <p class="p-1 g-lgreen d-inline"> Question 1 of 5 </p>
+        <br>
+        <br>
+        <h2> Before we dive in, what's your name?</h2>
+        <span class="text-secondary"> (First name's fine!) </span>
+        <br>
+        <br>
+        <input type="text" id="name" class="labelw" placeholder="Type your answer here..." > 
+        <br>
+        <br>
+        <input type="button" class="btn btn-dark" value="NEXT" onclick="Next()">
+        <br>
+    </div>
+    </div>
+    </div>
+
+    <div id="question2-div">
+        <div class="d-flex justify-content-center">
+        <div id="question2" class="">
+            <p class="p-1 g-lgreen d-inline"> Question 2 of 5 </p>
+            <br>
+            <br>
+            <h2> Where are you in your career?</h2>
+            
+            <label class="labelr" for=""> <input type="radio" class="radioposition" name="q2" onclick="CancelOther()"> I know what career I want, and I need to learn some skill</label>
+            <br>
+            <label class="labelr" for=""> <input type="radio" class="radioposition" name="q2" onclick="CancelOther()"> I like my career-or, at least, I don't HATE it-but I keep wondering if there's something more out there.</label>
+            <br>
+            <label class="labelr" for=""> <input type="radio" class="radioposition" name="q2" onclick="CancelOther()"> I took a break from my career, and now I'm ready to get back into the workforce</label>
+            <br>
+            <label class="labelr" for=""> <input type="radio" class="radioposition" name="q2" onclick="CancelOther()"> I want to make a career change, but I'm also super busy.</label>
+            <br>
+            <label class="labelr" for=""> <input type="radio" class="radioposition" name="q2" onclick="CancelOther()"> I'm just starting out.</label>
+            <br>
+            <label class="labelr" for=""> <input type="radio" class="radioposition" name="q2" onclick="CancelOther()"> I'm burnt out from going into an office every day and ready to make my own hours</label>
+            <br>
+            <label class="labelr" for=""> <input type="radio" class="radioposition" name="q2" id="otherradio" onclick="Other()"> Other(please enter) </label>
+            <br>
+
+            <input type="text" class="labelw" id="otherinput" class="labelw" placeholder="Type your answer here..." > 
+            <br>
+            <input type="button" class="btn btn-dark" value="NEXT" onclick="Next1()">
+            <br>
+        </div>
+        </div>
+    </div>
+
+    <div id="question3-div">
+        <div class="d-flex justify-content-center">
+        <div id="question3" class="">
+            <p class="p-1 g-lgreen d-inline"> Question 3 of 5 </p>
+            <br>
+            <br>
+            <h2> What's your biggest concern about <br> learning tech skills</h2>
+            
+            <label class="labelr" for=""> <input type="radio" class="radioposition" name="q2" > Even if I learned the skills, with my weird resume, why would they hire me over a computer science grad?</label>
+            <br>
+            <label class="labelr" for=""> <input type="radio" class="radioposition" name="q2" > I don't have the time to learn new skills. </label>
+            <br>
+            <label class="labelr" for=""> <input type="radio" class="radioposition" name="q2" > I dream of a remote job-but do those jobs REALLY exist for, you know, REAL people like me?</label>
+            <br>
+            <label class="labelr" for=""> <input type="radio" class="radioposition" name="q2" > It's too late in my career/life to make this big of a change. </label>
+            <br>
+            <label class="labelr" for=""> <input type="radio" class="radioposition" name="q2" > Learning tech skills is expensive and I'm on a tight budget-I'm not sure it's worth it.</label>
+            <br>
+            <label class="labelr" for=""> <input type="radio" class="radioposition" name="q2" > My career is okay and learning tech skills is expensive-why should I rock the boat?</label>
+            <br>
+            
+            <input type="button" class="btn btn-dark" value="NEXT" onclick="Next2()">
+            <br>
+        </div>
+        </div>
+    </div>
+
+    <div id="question4-div">
+        <div class="d-flex justify-content-center">
+        <div id="question4" class="">
+            <p class="p-1 g-lgreen d-inline"> Question 4 of 5 </p>
+            <br>
+            <br>
+            <h2> Picture the perfect workplace for you. <br> What do you see? </h2>
+            
+            <label class="labelr" for=""> <input type="radio" class="radioposition" name="q2" > A busting agency where I'm surrounded by incredible creative talent.</label>
+            <br>
+            <label class="labelr" for=""> <input type="radio" class="radioposition" name="q2" > A collaborative enviroment where I'm LEADING the team </label>
+            <br>
+            <label class="labelr" style="height: 70px;" for=""> <input type="radio" class="radioposition" name="q2" > A collaborative enviroment where I'm a full-time member of a team working shoulder-to-shoulder with fun, experienced team members.</label>
+            <br>
+            <label class="labelr" style="height: 70px;" for=""> <input type="radio" class="radioposition" name="q2" > A coworking spot! I worth with my team sometimes in-person and then have the freedom to finish my work around my busy schedule. </label>
+            <br>
+            <label class="labelr" for=""> <input type="radio" class="radioposition" name="q2" > A video conference with coworkers on my screen...and the beach behind it.</label>
+            <br>
+            <label class="labelr" for=""> <input type="radio" class="radioposition" name="q2" > Work at home in the morning, with time for kids' soccer practice in the afternoon.</label>
+            <br>
+            
+            <input type="button" class="btn btn-dark" value="NEXT" onclick="Next3()">
+            <br>
+        </div>
+        </div>
+    </div>
+
+    <div id="question5-div">
+        <div class="d-flex justify-content-center">
+        <div id="question5" class="">
+            <p class="p-1 g-lgreen d-inline"> Question 5 of 5 </p>
+            <br>
+            <br>
+            <h2> Just one more thing! How much you like <br> this survey? </h2>
+            <span class="text-secondary"> (We hope think you like it!) </span>
+            <br>
+            <label for="onetofive" class="form-label"> 1 - 5 </label>
+            <input type="range" class="form-range" min="1" max="5" id="onetofive">
+            <br>
+            <input type="button" class="btn btn-dark" value="SUBMIT" onclick="Submit()">
+            <br>
+        </div>
+        </div>
+    </div>
+
+    <div id="smile1-div">
+        <div class="text-center">
+            <br>
+            <h2> Hi <span id="usernameinput1"> </span> <br> Thank you for your time</h2>
+            <span> We appreciate your opinion. Oooops, sorry to disappoint you.</span>
+            <br>
+            <br>
+            <i class="fa-regular fa-face-sad-tear smile"></i>
+            
+        
+        </div>
+    </div>
+
+    <div id="smile2-div">
+        <div class="text-center">
+            <br>
+            <h2> Hi <span id="usernameinput2"> </span> <br> Thank you for your time</h2>
+            <span> We appreciate your opinion. We hope it will be better next time!</span>
+            <br>
+            <br>
+            <i class="fa-regular fa-face-frown smile"></i>
+            
+        
+        </div>
+    </div>
+
+    <div id="smile3-div">
+        <div class="text-center">
+            <br>
+            <h2> Hi <span id="usernameinput3"> </span> <br> Thank you for your time</h2>
+            <span> We appreciate your opinion. Golden middle.</span>
+            <br>
+            <br>
+            <i class="fa-solid fa-face-smile smile"></i>
+            
+        
+        </div>
+    </div>
+
+    <div id="smile4-div">
+        <div class="text-center">
+            <br>
+            <h2> Hi <span id="usernameinput4"> </span> <br> Thank you for your time</h2>
+            <span> We appreciate your opinion. Thanks for the very good rating!</span>
+            <br>
+            <br>
+            <i class="fa-regular fa-face-smile-beam smile"></i>
+            
+        
+        </div>
+    </div>
+
+
+    <div id="smile5-div">
+        <div class="text-center">
+            <br>
+            <h2> Hi <span id="usernameinput5"> </span> <br> Thank you for your time</h2>
+            <span> We appreciate your opinion. We are glad to meet your requirements!</span>
+            <br>
+            <br>
+            <i class="fa-regular fa-face-grin-hearts smile"></i>
+            
+        
+        </div>
+    </div>
+        
+   
+
+
+
+
+
+
+
+        
+
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js">
+
+    </script>
+    <script src="javaScriptF.js">
+
+    </script>
+</body>
+
+</html>
