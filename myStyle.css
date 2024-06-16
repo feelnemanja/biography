@@ -476,12 +476,46 @@ display: none;
 {
 margin-top: 50px;
 }
+#detailModal{
+    display: none;
+}
+#viewreservation{
+    background-color: transparent;
+}
 
-
-
+#buttonpositionright{
+    display: flex;
+    justify-content: end;
+}
+#reservationModal{
+    display: none;
+}
+.courses-main-div{
+    min-height: 400px;
+    background-image: url(courses-cover.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.modal-content{
+    padding: 0px;
+}
+#inputmodal{
+    width: 400px;
+    display: flex;
+    text-align: left;
+    min-height: 0px;
+    
+}
+.form-control{
+    width: 120%;
+}
 @media (max-width: 992px){
     .navbar-brand{
-        left: 100px;
+        left: 0px;
         
         
     }

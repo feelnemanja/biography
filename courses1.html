@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="myStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link href="https://cdn.datatables.net/v/bs5/dt-2.0.8/datatables.min.css" rel="stylesheet">
+</head>
+
+<body style="background-color: #1e81b0;">
+    <nav class="navbar navbar-expand-md" id="nav-bar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"> NEMANJA FILIPOVIĆ </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04"
+                aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" id="menubutton"> MENU ☰</span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample04" id="navbar-right">
+                <ul class="navbar-nav ms-auto mb-2 mb-md-0" id="list">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="portfolio.html"> PORTFOLIO </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#aboutid">ABOUT </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contat-me-id"> CONTACT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="survey.html"> SURVEY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses1.html"> COURSES</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <div class="courses-main-div">
+        <h4 class="text-dark">COURSES</h4>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="table-responsive">
+                    <table id="coursesTable" class="table table-striped table-hover table-bordered">
+
+                        <thead>
+                            <tr style="background-color: transparent;">
+                                <th>Course</th>
+                                <th>Starting date</th>
+                                <th>Duration</th>
+                                <th>Price</th>
+                                <th>Details</th>
+                                <th>Reservations</th>
+                            </tr>
+                        </thead>
+                        <tbody style="background-color: whitesmoke;">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-12" id="buttonpositionright">
+                <button class="border border-success text-dark" id="viewReservations" onclick="toggleTables()">View Reservations</button> <br>
+                <button class="border border-success text-dark" id="backToCourses" style="display: none;" onclick="showCourses()">Back to Courses</button>
+            </div>
+
+
+
+            <div id="myModal" class="modal">
+                <div class="modal-content" id="inputmodal">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Make Reservation</h5>
+                    </div>
+
+
+                    <form id="myForm">
+                        <label for="courseName">Selected course:</label>
+                        <input id="courseName" name="courseName" type="text" class="form-control w-40" readonly />
+                        <label for="price">Price:</label>
+                        <input id="price" type="text" name="price" class="form-control" readonly />
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                        <label for="surname">Surname:</label>
+                        <input type="text" id="surname" name="surname" class="form-control" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+
+                        <label for="note">Note:</label>
+                        <textarea id="note" name="note" class="form-control"></textarea>
+
+                        <br>
+                        <div class="d-flex justify-content-end">
+                            <button class="close btn btn-secondary me-2" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" id="posalji" class="btn btn-success" value="Save">Save
+                                Reservation</button>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <table class="table table-striped w-150" id="dataTable" style="background-color: whitesmoke; display: none;">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Email</th>
+                        <th>Course</th>
+                        <th>Price</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <div id="totalSum" style="display: none;">TOTAL: <span id="totalPriceSpan">0</span><span>$</span></div>
+        </div>
+
+    </div>
+
+    </div>
+
+    <div class="div5">
+        <div class="container-fluid">
+            <div class="row">
+
+
+                <div class="bottom-grid-item col-lg-4 col-md-12 sm-12">
+
+                    <span id="bottom-box-margin"> LOCATION</span>
+
+                    <span id="bottom-box-margin"> SMARTINIT Novi Sad <br> Serbia </span>
+                </div>
+
+                <div class="bottom-grid-item col-lg-4 col-md-12 sm-12">
+                    <p> AROUND THE WEB</p>
+                    <div class="icons">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-dribbble"></a>
+                    </div>
+
+
+                </div>
+                <div class="bottom-grid-item col-lg-4 col-md-12 sm-12">
+                    <p> ABOUT SMARTINIT </p>
+                    <span> PanonIT Code Academy -> <a href="https://smartinit.net/lista-kurseva/"> Start Course</a>
+                        . </span>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="div6">
+
+        <p class="text-white"> Copyright © Nemanja Filipović 2024 </p>
+    </div>
+    <!-- 
+    MODALI
+-->
+    <div class="modal" data-bs-backdrop="static" id="detailModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <h2 class="text-secondary"> OSNOVE PROGRAMIRANJA </h2>
+                <h2 class="star-color"> ――― ★ ――― </h2>
+                <img src="kurs-osnove-programiranja.jpg" class="modalimg">
+                <div class="modal-text">
+                    <span>
+                        Ukoliko i Vi želite karijeru u IT sektoru a pitate se odakle uopšte početi, kako je najlakše
+                        naučiti programiranje i da li je teško savladati programiranje, ukoliko želite da načinite prvi
+                        korak i uđete u svet informacionih tehnologija, SmartInIt kursevi programiranja su pravi izbor
+                        za Vas. <br> <span id="modalprice"> 250$ </span>
+                    </span>
+                </div>
+
+
+                <br>
+                <div class="send-button" id="modal-button">
+                    <button type="button" class="close-modal" id="send-button" onclick="closeModal()"> <span
+                            class="text-white" id="whitex"> &#x2715 </span> Close Window</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js">
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    <script src="https://cdn.datatables.net/v/bs5/dt-2.0.8/datatables.min.js"></script>
+    <script src="tableScript1.js"> </script>
+
+</body>
+
+</html>
